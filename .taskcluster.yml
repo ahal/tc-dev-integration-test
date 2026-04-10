@@ -3,6 +3,10 @@ reporting: checks-v1
 policy:
   pullRequests: public_restricted
   allowComments: collaborators
+hooks:
+  - name: hello/noun
+    context:
+      noun: dolly
 tasks:
   - $if: 'tasks_for == "github-pull-request-untrusted"'
     then:
